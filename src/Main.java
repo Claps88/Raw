@@ -78,9 +78,10 @@ public class Main {
 
     public static void showTable(String table) {
         try {
-
+            //Getting a connection to the database
             Connection myConn = Singleton.getConn();
 
+            //Creating a statement
             PreparedStatement myStat;
 
             String query = String.format("select * from %s", table);
@@ -130,8 +131,10 @@ public class Main {
     private static void addPlayer(int id, String name, String lastName1, String lastName2, String psw, String email) {
 
         try {
+            //Getting a connection to the database
             Connection conn = Singleton.getConn();
 
+            //Creating a statement
             PreparedStatement stmnt = conn.prepareStatement("insert into players"
                     + "(id, nombre, apellido1, apellido2, password, email)"
                     + "values (?,?,?,?,?,?);");
@@ -142,6 +145,8 @@ public class Main {
             stmnt.setString(4, lastName2);
             stmnt.setString(5, psw);
             stmnt.setString(6, email);
+
+            //Executing SQL query
             stmnt.executeUpdate();
             System.out.println("Insert complete.");
         }
@@ -154,10 +159,13 @@ public class Main {
     private static void deletePlayerDatabase(int id) {
 
         try {
+            //Getting a connection to the database
             Connection myConn = Singleton.getConn();
 
+            //Creating a statement
             PreparedStatement myStat;
 
+            //Executing SQL query
             myStat = myConn.prepareStatement("delete from players where id= ?");
 
             myStat.setInt(1, id);
@@ -173,10 +181,13 @@ public class Main {
     private static void findById(int id) {
 
         try {
+            //Getting a connection to the database
             Connection myConn = Singleton.getConn();
 
+            //Creating a statement
             PreparedStatement myStat;
 
+            //Executing SQL query
             myStat = myConn.prepareStatement("select * from players where id = ?");
 
             myStat.setInt(1,id);
