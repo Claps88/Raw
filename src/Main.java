@@ -107,7 +107,10 @@ public class Main {
 
     }
 
-    /*private static void addPlayer(int id, String nombre, String apellido1, String apellido2, String password, String email) {
+    /*
+    THIS WONT WORK
+
+    private static void addPlayer(int id, String nombre, String apellido1, String apellido2, String password, String email) {
         try {
             Connection myConn = Singleton.getConn();
 
@@ -207,71 +210,5 @@ public class Main {
         System.out.print("Please choose how you want to interact with the database: \n");
     }
 }
-
-
-
-
-
-
-     /*   //Mientras la opción elegida sea 0, preguntamos al usuario
-        while(select != 0){
-            //Try catch para evitar que el programa termine si hay un error
-            try{
-                System.out.println("Elige opción:\n1.- Sumar" +
-                        "\n2.- Restar\n" +
-                        "3.- Multiplicar\n" +
-                        "4.- Dividir\n" +
-                        "0.- Salir");
-                //Recoger una variable por consola
-                select = Integer.parseInt(scanner.nextLine());
-
-                //Ejemplo de switch case en Java
-                switch(select){
-                    case 1:
-                        askNr();
-                        System.out.println(num1+" + "+num2+" = "+(num1+num2));
-                        break;
-                    case 2:
-                        askNr();
-                        System.out.println(num1+" - "+num2+" = "+(num1-num2));
-                        break;
-                    case 3:
-                        askNr();
-                        System.out.println(num1+" * "+num2+" = "+(num1*num2));
-                        break;
-                    case 4:
-                        askNr();
-                        System.out.println(num1+" / "+num2+" = "+(num1/num2));
-                        break;
-                    case 0:
-                        System.out.println("Adios!");
-                        break;
-                    default:
-                        System.out.println("Número no reconocido");break;
-                }
-
-                System.out.println("\n"); //Mostrar un salto de línea en Java
-
-            }catch(Exception e){
-                System.out.println("Uoop! Error!");
-            }
-        }
-
-    }
-
-    public static void askNr() {
-        System.out.println("Introduce número 1:");
-        num1 = Integer.parseInt(scanner.nextLine());
-
-        System.out.println("Introduce número 2:");
-        num2 = Integer.parseInt(scanner.nextLine());
-
-        //Mostrar un salto de línea en Java
-        System.out.println("\n");
-    }
-
-    public static void testDatabase(String table) {
-    }
-*/
 
 
